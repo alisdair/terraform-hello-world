@@ -1,3 +1,7 @@
+variable "hello_world" {
+  default = "HELLO WORLD!"
+}
+
 resource "random_id" "random" {
   keepers {
     uuid = "${uuid()}"
@@ -6,6 +10,6 @@ resource "random_id" "random" {
   byte_length = 8
 }
 
-output "random" {
-  value = "${random_id.random.hex}"
+output "greeting" {
+  value = "${var.hello_world}"
 }
