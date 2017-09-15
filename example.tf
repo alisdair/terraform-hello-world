@@ -13,6 +13,3 @@ resource "random_id" "random" {
 output "greeting" {
   value = "${var.hello_world}"
 }
-
-
-
